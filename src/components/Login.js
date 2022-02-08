@@ -49,21 +49,22 @@ const dataReceived=useContext(ContextData)
   }
 
   const validatePass = (pass) => {
-    let emp = /^$/
-    let lett = /^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#\$%\^&\*])(?=.{8,})/
-    if (emp.test(pass)) {
-      setisPasswordValid(false)
-      setpasswordError('Please fill the field')
-      return false
-    } else if (lett.test(pass)) {
-      setisPasswordValid(true)
-      setpasswordError('')
-      return true
-    } else {
-      setisPasswordValid(false)
-      setpasswordError('Password should be strong')
-      return false
-    }
+    // let emp = /^$/
+    // let lett = /^(?=.[a-z])(?=.[A-Z])(?=.[0-9])(?=.[!@#\$%\^&\*])(?=.{8,})/
+    // if (emp.test(pass)) {
+    //   setisPasswordValid(false)
+    //   setpasswordError('Please fill the field')
+    //   return false
+    // } else if (lett.test(pass)) {
+    //   setisPasswordValid(true)
+    //   setpasswordError('')
+    //   return true
+    // } else {
+    //   setisPasswordValid(false)
+    //   setpasswordError('Password should be strong')
+    //   return false
+    // }
+    return true
   }
 
   const handelChange = (event) => {
@@ -89,7 +90,7 @@ const dataReceived=useContext(ContextData)
               <label for="exampleInputPassword1" class="form-label">Password</label> <br/>
               
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder='Enter your Password...' name='password' onChange={handelChange} value={user.password} />
-              {!isPasswordValid ? <span style={{ color: 'red', border: 'red', fontSize: '12px' }}>{passwordError}</span> : null}
+              {/* {!isPasswordValid ? <span style={{ color: 'red', border: 'red', fontSize: '12px' }}>{passwordError}</span> : null} */}
 
             </div> <br />
 
