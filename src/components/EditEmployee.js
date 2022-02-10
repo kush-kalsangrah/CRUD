@@ -31,7 +31,7 @@ setSelectedEmployee1(employeeCopy)
  }
 
  const closeModal=()=>{
-// props.history.push('/tableshow')
+props.history.push('/tableshow')
  }
 
 const saveChanges=()=>{
